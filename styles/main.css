@@ -1,0 +1,243 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+
+:root {
+  --color-primary: #ed7d3a;
+  --color-secondary: #36827f;
+  --color-accent-light: #ece4b7;
+  --color-accent-dark: #1b2432;
+  --color-white: #fffbfc;
+  --color-black: #222;
+  --transparent: #00000000;
+  --color-shadow: #00000020;
+
+  --color-darkgrey: #555;
+  --color-lightgrey: #aaa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1.5em;
+  text-shadow: 2px 2px var(--color-black);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw + 1rem, 5rem);
+}
+
+.hero > div {
+  position: absolute;
+  z-index: 100;
+}
+
+.hero p {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.hero img {
+  filter: brightness(60%);
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-black);
+  font-weight: 700;
+  margin-top: 1.5em;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-top: 1.5em;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-black);
+  font-weight: 400;
+  margin-top: 1.5em;
+}
+
+body {
+  font-family: "Hind", sans-serif;
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  display: inline-block;
+  transition: color 300ms ease;
+}
+
+a[href]:hover {
+  color: var(--color-accent-light);
+}
+
+.button {
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  border: 3px solid var(--transparent);
+  transition: background-color 300ms ease, color 300ms ease, border 300ms ease;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: var(--color-accent-dark);
+  background-color: var(--color-white);
+  border: 3px solid var(--color-accent-dark);
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.cards {
+  margin: 100px 50px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 1px var(--color-shadow);
+  border-radius: 10px;
+  display: inline-block;
+  background-color: white;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.card:hover {
+  width: 306px;
+  height: 408px;
+  margin: 6px 7px;
+  box-shadow: 0px 0px 15px 3px var(--color-shadow);
+}
+
+.card img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card h4 {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.card p {
+  width: 80%;
+  margin: 10px;
+  color: var(--color-black);
+}
+
+article,
+aside {
+  margin-bottom: 6rem;
+}
+
+footer {
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  padding: 2em 1em;
+}
